@@ -9,10 +9,12 @@ This repository contains the source code for the novelty-aware GNN model for str
 
 > **Data processing**
 
-The data processing pipeline allow users to generate sequence or structural embeddings from the phage of _klebsiella_ genomes.
+The data processing pipeline allow users to generate sequence or structural embeddings from the phage or _klebsiella_ genomes.
+
 The data processing stage involves:
 1. Extraction of phage receptor binding proteins (RBPs) from phage genomes using PHANOTATE and RBPdetect.
 2. Extraction of bacterial K-locus proteins using Kaptive from _Klebsiella_ genomes.
 3. Generate numerical representations using the respective biological foundation models, i.e., ESMC, ESM2, LucaOne, BacFormer.
-4. Run AF3 to predict 3D structures for the respective phage and host proteins, and extract structural features using ESM-IF1 encoder.
+4. Predict 3D protein structures using AF3, and extract structural feature embeddings using ESM-IF1 encoder.
 5. Aggregate multi-instance proteins via columnwise mean to obtain the final single vector per phage or bacterium.
+6. Compute the phage and host cosine similarities, which facilitates phage and host clustering for model training via the leave-one-group-out cross-validation (LOGOCV) approach.
