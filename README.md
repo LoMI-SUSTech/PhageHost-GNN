@@ -22,8 +22,7 @@ The data processing stage involves:
 
 > **Installation requirements**
 
-To run our model successfully, the following dependency requirements must be satisfied:
-The software was run in a H100 80 GPU using Python v3.9.23 in addition to the following dependencies:
-PyTorch v2.2.2, PyTorch Geometric v2.6.1, torch-scatter v2.1.2, torch-sparse v0.6.18, Scikit-learn v1.6.1, NumPy v1.26.3, Pandas v2.3.0, SciPy v1.13.1, Matplotlib v3.9.4, Biopython v1.85, and OpenPyXL v3.1.5.
-Additional bioinformatics tools used for sequence processing and analysis include Kaptive v3.1.0, PHANOTATE v1.6.7, BLAST+ v2.16.0, FastANI v1.34, and CD-HIT v4.8.1.
-GPU-based model training was performed using PyTorch compiled with CUDA 11.8 support.
+To run our model, the following dependency requirements must be satisfied:
+Model training and inference were performed using Python v3.9.23 on an NVIDIA H100 80 GB GPU using PyTorch v2.2.2 with CUDA 11.8 support.
+Major dependencies included PyTorch Geometric v2.6.1, torch-scatter v2.1.2, torch-sparse v0.6.18, Scikit-learn v1.6.1, NumPy v1.26.3, Pandas v2.3.0, SciPy v1.13.1, Matplotlib v3.9.4, and Biopython v1.85.
+Additional bioinformatics tools included PHANOTATE v1.6.7, Kaptive v3.1.0, BLAST+ v2.16.0, FastANI v1.34, and CD-HIT v4.8.1.
