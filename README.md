@@ -6,8 +6,8 @@ This repository contains the source code for the novelty-aware GNN model for str
 2. Inference: Users can directly predict potential interacting phage, or host candidates, or novel phage-host pairs using the corresponding pretrained model weights. This is particularly useful when new datasets are highly similar to their training counterparts.
 3. Fine-tuning: The fine-tuning pipeline allows users to adapt pretrained models to their local custom datasets, especially when sufficient interaction datasets are unavailable for model training from scratch.
 
-**Data processing**
-The data processing pipeline allows users to generate sequence or structural embeddings from the phage of _klebsiella_ genomes.
+> **Data processing**
+The data processing pipeline allow users to generate sequence or structural embeddings from the phage of _klebsiella_ genomes.
 The data processing stage involves:
 1. Extraction of phage receptor binding proteins (RBPs) from phage genomes using PHANOTATE and RBPdetect.
 2. Extraction of bacterial K-locus proteins using Kaptive from _Klebsiella_ genomes.
