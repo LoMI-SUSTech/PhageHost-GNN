@@ -1,0 +1,33 @@
+name: new_lucaone_app_env
+channels:
+  - http://mirrors.sustech.edu.cn/anaconda/pkgs/main/linux-64/
+  - http://mirrors.sustech.edu.cn/anaconda/pkgs/free/linux-64/
+  - http://mirrors.sustech.edu.cn/anaconda/pkgs/r/linux-64/
+  - http://mirrors.sustech.edu.cn/anaconda/cloud/conda-forge/linux-64/
+  - http://mirrors.sustech.edu.cn/anaconda/cloud/bioconda/linux-64/
+dependencies:
+  - pip==24.2=py39h06a4308_0
+  - openssl==1.1.1w=h7f8727e_0
+  - libstdcxx-ng==11.2.0=h1234567_1
+  - libgcc-ng==11.2.0=h1234567_1
+  - readline==8.2=h5eee18b_0
+  - sqlite==3.45.3=h5eee18b_0
+  - _openmp_mutex==5.1=1_gnu
+  - zlib==1.2.13=h5eee18b_1
+  - libffi==3.3=he6710b0_2
+  - libgomp==11.2.0=h1234567_1
+  - setuptools==75.1.0=py39h06a4308_0
+  - tk==8.6.14=h39e8969_0
+  - python==3.9.13=haa1d7c7_2
+  - wheel==0.44.0=py39h06a4308_0
+  - xz==5.4.6=h5eee18b_1
+  - ld_impl_linux-64==2.40=h12ee557_0
+  - ca-certificates==2026.4.22
+  - _libgcc_mutex==0.1=main
+  - ncurses==6.4=h6a678d5_0
+  - cuda-nvcc=11.7
+  - cuda-cudart-dev=11.7
+  - compilers
+  - cuda-libraries-dev=11.7
+  - libcusparse-dev
+  - cuda-version=11.7
