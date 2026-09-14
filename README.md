@@ -19,8 +19,10 @@ The data processing stage involves:
 5. Aggregate multi-instance proteins via columnwise mean to obtain the final single vector per phage or bacterium.
 6. Compute the phage and host cosine similarities, which facilitates phage and host clustering for model training via the leave-one-group-out cross-validation (LOGOCV) approach.
 
-Note:\n
+Note:
+
 Download the model weights for ESMC, LucaOne, and BacFormer from Zenodo and save them in resources/embedding_models/. \n
+
 Download the PhageRBPdetection directory from Zenodo and save it in resources/.
 
 
