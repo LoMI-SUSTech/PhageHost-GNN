@@ -25,6 +25,7 @@ Note:
 <br>Choose to start from genomes if the phage RBPs and host K-locus proteins have not yet been extracted; otherwise, start from proteins.
 
 > **Fine-tuning**
+
 <br>To run fine-tuning, first process the local dataset using the data processing pipeline to generate the required sequence and structural embeddings, then modify the file directories accordingly.
 <br>Download the pretrained models from Zenodo and save them in PH_trained_models/host_unseen/.
 
