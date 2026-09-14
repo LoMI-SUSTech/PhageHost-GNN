@@ -26,8 +26,8 @@ Note:
 
 > **Fine-tuning**
 
-To run fine-tuning, first process the local dataset using the data processing pipeline to generate the required sequence and structural embeddings, then modify the file directories accordingly.
-<br>Download the pretrained models from Zenodo and save them in PH_trained_models/host_unseen/.
+- To run fine-tuning, first process the local dataset using the data processing pipeline to generate the required sequence and structural embeddings, then modify the file directories accordingly.
+<br> - Download the pretrained models from Zenodo and save them in PH_trained_models/host_unseen/.
 
 > **Installation requirements**
 
