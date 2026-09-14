@@ -27,7 +27,7 @@ Note:
 > **Fine-tuning**
 
 - To run fine-tuning, first process the local dataset using the data processing pipeline to generate the required sequence and structural embeddings, then modify the file directories accordingly.
-- Download the pretrained models from Zenodo and save them in PH_trained_models/host_unseen/.
+- Download the PhageHost-GNN pretrained models from Zenodo and save them into **Fine-tuning/PH_trained_models/host_unseen/**.
 
 > **Installation requirements**
 
