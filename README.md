@@ -20,9 +20,9 @@ The data processing stage involves:
 6. Compute the phage and host cosine similarities, which facilitates phage and host clustering for model training via the leave-one-group-out cross-validation (LOGOCV) approach.
 
 Note:
-<br> - Download the model weights for ESMC, LucaOne, and BacFormer from Zenodo and save them in **resources/embedding_models/**.
-<br> - Download the PhageRBPdetection directory from Zenodo and save it in **resources/**.
-<br> - Start from genomes if the phage RBPs and host K-locus proteins have not yet been extracted; otherwise, start from proteins.
+- Download the model weights for ESMC, LucaOne, and BacFormer from Zenodo and save them in **resources/embedding_models/**.
+- Download the PhageRBPdetection directory from Zenodo and save it in **resources/**.
+- Start from genomes if the phage RBPs and host K-locus proteins have not yet been extracted; otherwise, start from proteins.
 
 > **Fine-tuning**
 
