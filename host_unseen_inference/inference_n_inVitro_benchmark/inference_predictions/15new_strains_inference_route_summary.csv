@@ -1,5 +1,0 @@
-selected_model,selected_quantile,n_hosts,n_phages,n_predictions,mean_score
-AF3,0.9,7,27,189,0.18457641290981883
-BacFormer,0.99,3,27,81,0.44508019634253954
-BacFormer,0.995,2,27,54,0.29365305660965063
-BacFormer,0.999,3,27,81,0.8135589214527622
