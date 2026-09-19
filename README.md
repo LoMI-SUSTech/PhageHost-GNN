@@ -18,10 +18,10 @@ The data-processing pipeline generates sequence- and structure-based representat
 5. Aggregate protein-level embeddings by column-wise mean to obtain a single representation for each phage or bacterial strain.
 6. Compute host–host and phage–phage cosine-similarity matrices for similarity-based grouping and downstream model training or adaptation.
 
-Note:
-- Download the model weights for ESMC, LucaOne, and BacFormer from Zenodo and save them in **resources/embedding_models/**.
-- Download the PhageRBPdetection directory from Zenodo and save it in **resources/**.
-- Start from genomes if the phage RBPs and host K-locus proteins have not yet been extracted; otherwise, start from proteins.
+   Note:
+   * Download the model weights for ESMC, LucaOne, and BacFormer from Zenodo and save them in **resources/embedding_models/**.
+   * Download the PhageRBPdetection directory from Zenodo and save it in **resources/**.
+   * Start from genomes if the phage RBPs and host K-locus proteins have not yet been extracted; otherwise, start from proteins.
 
 > **Training from scratch or reproducing our analyses**
 1. Clone or download this repository.
