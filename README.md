@@ -24,28 +24,31 @@ Note:
 - Download the PhageRBPdetection directory from Zenodo and save it in **resources/**.
 - Start from genomes if the phage RBPs and host K-locus proteins have not yet been extracted; otherwise, start from proteins.
 
-> **Inference**
-1. Process the local dataset using the data-processing pipeline to generate the required embeddings.
-    * Run: *data_processing.ipynb*
-2. Assign similarity quantiles to the new entities. Ensure the precomputed training cosine-similarity matrices are available, then run the corresponding notebook to determine the highest supported similarity quantile for each new entity.
-    * Host-unseen: *new_strains_q_assignment.ipynb*
-    * Both-unseen: *new_phages_and_strains_q_assignment.ipynb*
-3. Download the pretrained PhageHost-GNN models from Zenodo and place them in:
-    * Host-unseen: *inference_host_unseen/PH_trained_models/*
-    * Both-unseen: *inference_both_unseen/PH_trained_models/*
-4. Ensure the required input files are available in the expected directories, including the new entity embeddings and training embeddings, and update file paths in the inference notebook if necessary.
-5. Run the corresponding inference notebook to generate interaction scores for the new phage–host pairs.
+> **Training from scratch or reproducing our analyses**
+1. Clone or download this repository.
+2. Install the required dependencies as described in the Installation section.
+3. Process your own dataset using the provided data-processing pipeline, or use our processed datasets to reproduce our analyses.
+4. Navigate to the corresponding training notebook for the desired setting (host-unseen, phage-unseen, or both-unseen).
+5. Update the required file paths and training configurations.
+6. Run the training notebook to train the models from scratch or reproduce the reported analyses.
 
-> **Fine-tuning**
+   
+> **Making predictions for your data**
+1. Clone or download this repository and install the required dependencies as described in the Installation section.
+2. Download the required training data and the pretrained PhageHost-GNN models from Zenodo.
+3. Process your local phage and/or bacterial genomes using data_processing.ipynb to generate the required embeddings.
+4. Assign the highest supported similarity quantile to the new entities using:
+    * Host-unseen: new_strains_q_assignment.ipynb
+    * Both-unseen: new_phages_and_strains_q_assignment.ipynb
+5. Ensure the required training and new entity embeddings are available in the expected directories, update the file paths if necessary, and run the corresponding inference notebook to generate phage–host interaction scores.
 
-1. Process local dataset using the data-processing pipeline to generate embeddings and cosine-similarity matrices.
-    * Run: *data_processing.ipynb*
-2. Prepare local interaction data and ensure generated embeddings, cosine-similarity matrices, and interaction matrix are available in the expected directories.
-3. Download the pretrained PhageHost-GNN models from Zenodo and place them in:
-   *Fine-tuning/PH_trained_models/host_unseen/*
-4. Ensure the pretrained LOGOCV results are available in *Fine-tuning/PH_q_LOGOCV_results/*. These are used to select the best pretrained model at each similarity quantile.
-5. Update required file paths and fine-tuning settings in the notebook to match the local structure.
-6. Run the fine-tuning notebook, which evaluates routed models and trains a final locally adapted model for each similarity quantile.
+> **Fine-tuning on your data**
+1. Clone or download this repository and install required dependencies as described in the Installation section.
+2. Download LOGOCV results pretrained PhageHost-GNN models from Zenodo.
+3. Process your local dataset using *data_processing.ipynb* to generate the required embeddings and cosine-similarity matrices.
+4. Ensure the local interaction matrix, embeddings, and cosine-similarity matrices are available in the expected directories.
+5. Navigate to the fine-tuning notebook and update the required file paths and fine-tuning settings.
+6. Run the notebook to evaluate the routed models and train a final locally adapted model for each similarity quantile.
 
 > **Installation requirements**
 
