@@ -9,15 +9,14 @@ This repository contains the source code for the novelty-aware GNN model for str
 
 > **Data processing**
 
-The data processing pipeline allow users to generate sequence or structural embeddings from the phage or _klebsiella_ genomes.
+The data-processing pipeline generates sequence- and structure-based representations from phage and Klebsiella genomes or extracted proteins. The pipeline includes:
 
-The data processing stage involves:
-1. Extraction of phage receptor binding proteins (RBPs) from phage genomes using PHANOTATE and RBPdetect.
-2. Extraction of bacterial K-locus proteins using Kaptive from _Klebsiella_ genomes.
-3. Generate numerical representations using the respective biological foundation models, i.e., ESMC, ESM2, LucaOne, BacFormer.
-4. Predict 3D protein structures using AF3, and extract structural feature embeddings using ESM-IF1 encoder.
-5. Aggregate multi-instance proteins via columnwise mean to obtain the final single vector per phage or bacterium.
-6. Compute the phage and host cosine similarities, which facilitates phage and host clustering for model training via the leave-one-group-out cross-validation (LOGOCV) approach.
+1. Extract phage receptor-binding proteins (RBPs) from phage genomes using PHANOTATE and RBPdetect.
+2. Extract bacterial K-locus proteins from Klebsiella genomes using Kaptive.
+3. Generate sequence-based protein embeddings using ESMC, ESM2, LucaOne, and BacFormer.
+4. Generate structure-based protein embeddings from user-provided AF3-predicted structures using the ESM-IF1 encoder.
+5. Aggregate protein-level embeddings by column-wise mean to obtain a single representation for each phage or bacterial strain.
+6. Compute host–host and phage–phage cosine-similarity matrices for similarity-based grouping and downstream model training or adaptation.
 
 Note:
 - Download the model weights for ESMC, LucaOne, and BacFormer from Zenodo and save them in **resources/embedding_models/**.
