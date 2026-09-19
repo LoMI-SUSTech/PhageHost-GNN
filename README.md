@@ -1,5 +1,5 @@
 # PhageHost-GNN
-This repository contains the source code for the novelty-aware GNN model for strain-level prediction of _Klebsiella_-phage interactions, which has been trained under three clinical settings; Host-unseen, phage-unseen and both-unseen to facilitate model generalization on novel phages or bacterial strains.
+This repository contains the source code for the novelty-aware GNN model for strain-level prediction of _Klebsiella_-phage interactions, which has been trained under three clinical settings; Host-unseen, phage-unseen, and both-unseen to facilitate model generalization on novel phages or bacterial strains.
 
 > **Repository overview**
 
@@ -9,10 +9,10 @@ This repository contains the source code for the novelty-aware GNN model for str
 
 > **Data processing**
 
-The data-processing pipeline generates sequence- and structure-based representations from phage and Klebsiella genomes or extracted proteins. The pipeline includes:
+The data-processing pipeline generates sequence- and structure-based representations from phage and _Klebsiella_ genomes or extracted proteins. The pipeline includes:
 
 1. Extract phage receptor-binding proteins (RBPs) from phage genomes using PHANOTATE and RBPdetect.
-2. Extract bacterial K-locus proteins from Klebsiella genomes using Kaptive.
+2. Extract bacterial K-locus proteins from _Klebsiella_ genomes using Kaptive.
 3. Generate sequence-based protein embeddings using ESMC, ESM2, LucaOne, and BacFormer.
 4. Generate structure-based protein embeddings from user-provided AF3-predicted structures using the ESM-IF1 encoder.
 5. Aggregate protein-level embeddings by column-wise mean to obtain a single representation for each phage or bacterial strain.
