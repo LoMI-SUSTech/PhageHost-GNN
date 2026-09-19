@@ -24,6 +24,20 @@ Note:
 - Download the PhageRBPdetection directory from Zenodo and save it in **resources/**.
 - Start from genomes if the phage RBPs and host K-locus proteins have not yet been extracted; otherwise, start from proteins.
 
+> **Inference**
+1. Process the local dataset using the data-processing pipeline to generate embeddings.
+    * Run: data_processing.ipynb
+2. Assign similarity quantiles to the new entities. Ensure precomputed training cosine-similarity matrices are present before running the corresponding notebook to determine the highest supported similarity quantile for each new entity.
+    * Host-unseen: new_strains_q_assignment.ipynb
+    * Both-unseen: new_phages_and_strains_q_assignment.ipynb
+3. Download pretrained model weights from **Zenodo** into the corresponding directory:
+    * Host-unseen: inference_host_unseen/PH_trained_models/
+    * Both-unseen: inference_both_unseen/PH_trained_models/
+4. Update the required file paths in the corresponding inference notebook to match the local structure.
+5. Run the corresponding inference notebook to generate interaction scores for the new phage-host pairs.
+    * Host-unseen: run the host-unseen inference notebook.
+    * Both-unseen: run the both-unseen inference notebook.
+
 > **Fine-tuning**
 
 - To run fine-tuning, first process the local dataset using the data processing pipeline to generate the required sequence and structural embeddings, then modify the file directories accordingly.
