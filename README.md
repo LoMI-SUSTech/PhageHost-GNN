@@ -29,7 +29,7 @@ The data-processing pipeline generates sequence- and structure-based representat
 3. Process your own dataset using the provided data-processing pipeline, or use our processed datasets to reproduce our analyses.
 4. Navigate to the corresponding training notebook for the desired setting (host-unseen, phage-unseen, or both-unseen).
 5. Update the required file paths and training configurations.
-6. Run the training notebook to train the models from scratch or reproduce the reported analyses.
+6. Run the training notebook (*PhageHost_GNN_training.ipynb* ) to train the models from scratch or reproduce the reported analyses.
 
    
 > **Making predictions for your data**
