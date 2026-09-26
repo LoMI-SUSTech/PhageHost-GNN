@@ -34,16 +34,17 @@ The data-processing pipeline generates sequence- and structure-based representat
    
 > **Making predictions for your data**
 1. Clone or download this repository and install the required dependencies as described in the Installation section.
-2. Download the required training data and the pretrained PhageHost-GNN models from Zenodo.
+2. Download the required pretrained PhageHost-GNN models from Zenodo.
 3. Process your local phage and/or bacterial genomes using data_processing.ipynb to generate the required embeddings.
 4. Assign the highest supported similarity quantile to the new entities using:
     * Host-unseen: new_strains_q_assignment.ipynb
     * Both-unseen: new_phages_and_strains_q_assignment.ipynb
-5. Ensure the required training and new entity embeddings are available in the expected directories, update the file paths if necessary, and run the corresponding inference notebook to generate phage–host interaction scores.
+5. Ensure the required training embeddings, new entity embeddings, and training entity cosine similarities are saved in the respective directories.
+6. uUpdate file paths, and run the corresponding inference notebook to generate phage–host interaction scores.
 
 > **Fine-tuning on your data**
 1. Clone or download this repository and install required dependencies as described in the Installation section.
-2. Download LOGOCV results pretrained PhageHost-GNN models from Zenodo.
+2. Ensure LOGOCV results of pretrained PhageHost-GNN models are in PH_q_LOGOCV_results.
 3. Process your local dataset using *data_processing.ipynb* to generate the required embeddings and cosine-similarity matrices.
 4. Ensure the local interaction matrix, embeddings, and cosine-similarity matrices are available in the expected directories.
 5. Navigate to the fine-tuning notebook and update the required file paths and fine-tuning settings.
