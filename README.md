@@ -59,5 +59,5 @@ Model training and inference were performed using: Python v3.9.23 on an NVIDIA H
 
 > **Environment setup**
 
-* All Conda environments should be created before running the pipeline.
+* All Conda environments listed in (_data_processing/resources/environments_) should be created before running the pipeline.
 * The main environment is used for data processing, model training, and inference, while model-specific environments are automatically invoked during embedding generation.
