@@ -34,7 +34,7 @@ The data-processing pipeline generates sequence- and structure-based representat
    
 > **Making predictions for your data**
 1. Clone or download this repository and install the required dependencies as described in the Installation section.
-2. Download the required pretrained PhageHost-GNN models from Zenodo.
+2. Download pretrained PhageHost-GNN model and Fine-tuned models from Zenodo.
 3. Process your local phage and/or bacterial genomes using data_processing.ipynb to generate the required embeddings.
 4. Assign the highest supported similarity quantile to the new entities using:
     * Host-unseen: new_strains_q_assignment.ipynb
