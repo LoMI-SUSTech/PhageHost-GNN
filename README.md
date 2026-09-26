@@ -40,7 +40,8 @@ The data-processing pipeline generates sequence- and structure-based representat
     * Host-unseen: new_strains_q_assignment.ipynb
     * Both-unseen: new_phages_and_strains_q_assignment.ipynb
 5. Ensure the required training embeddings, new entity embeddings, and training entity cosine similarities are saved in the respective directories.
-6. Update file paths, and run the corresponding inference notebook to generate phage–host interaction scores.
+6. For host-unseen fine-tuned models, comment cells 6, 7, 8, and 18, then uncomment cells 9 and 18.
+7. Update file paths, and run the corresponding inference notebook to generate phage–host interaction scores.
 
 > **Fine-tuning on your data**
 1. Clone or download this repository and install required dependencies as described in the Installation section.
