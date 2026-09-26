@@ -1,10 +1,8 @@
 name: phage_host_env_gnn_model
 channels:
-  - http://mirrors.sustech.edu.cn/anaconda/pkgs/main/linux-64/
-  - http://mirrors.sustech.edu.cn/anaconda/pkgs/free/linux-64/
-  - http://mirrors.sustech.edu.cn/anaconda/pkgs/r/linux-64/
-  - http://mirrors.sustech.edu.cn/anaconda/cloud/conda-forge/linux-64/
-  - http://mirrors.sustech.edu.cn/anaconda/cloud/bioconda/linux-64/
+  - conda-forge
+  - bioconda
+  - defaults
 dependencies:
   - numpy=1.26.3
   - libgcc=15.1.0
