@@ -1,10 +1,6 @@
 name: esm3_env
 channels:
-  - http://mirrors.sustech.edu.cn/anaconda/pkgs/main/linux-64/
-  - http://mirrors.sustech.edu.cn/anaconda/pkgs/free/linux-64/
-  - http://mirrors.sustech.edu.cn/anaconda/pkgs/r/linux-64/
-  - http://mirrors.sustech.edu.cn/anaconda/cloud/conda-forge/linux-64/
-  - http://mirrors.sustech.edu.cn/anaconda/cloud/bioconda/linux-64/
+  - defaults
 dependencies:
   - python==3.11.11=he870216_0
   - ld_impl_linux-64==2.40=h12ee557_0
