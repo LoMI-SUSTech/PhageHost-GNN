@@ -19,9 +19,13 @@ The data-processing pipeline generates sequence- and structure-based representat
 6. Compute host–host and phage–phage cosine-similarity matrices for similarity-based grouping and downstream model training or adaptation.
 
    Note:
-   * Download the model weights for ESMC, LucaOne, and BacFormer from Zenodo and save them in **resources/embedding_models/**.
-   * Download the PhageRBPdetection directory from Zenodo and save it in **resources/**.
-   * Start from genomes if the phage RBPs and host K-locus proteins have not yet been extracted; otherwise, start from proteins.
+   * Download model weights for ESMC, LucaOne, and BacFormer from Zenodo and save to **resources/embedding_models/**.
+   * Download the PhageRBPdetection directory from Zenodo and save to **resources/**.
+   * Start from genomes if phage RBPs and host K-locus proteins have not been extracted; otherwise, start from proteins.
+
+> **Pretrained models and processed datasets**
+* The pretrained model weights and processed datasets required for training, inference, and fine-tuning are available on Zenodo:
+* **Zenodo:** [10.5281/zenodo.22985280](https://zenodo.org/uploads/22985280)
 
 > **Training from scratch or reproducing our analyses**
 1. Clone or download this repository.
