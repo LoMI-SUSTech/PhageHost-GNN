@@ -60,7 +60,7 @@ The data-processing pipeline generates sequence- and structure-based representat
 
 * The PhageHost-GNN model, required the following dependencies to be satisfied:<br>
 Model training and inference were performed using: Python v3.9.23 on an NVIDIA H100 80 GB GPU using PyTorch v2.2.2 with CUDA 11.8 support.<br>
-* **Major dependencies** PyTorch Geometric v2.6.1, torch-scatter v2.1.2, torch-sparse v0.6.18, Scikit-learn v1.6.1, NumPy v1.26.3, Pandas v2.3.0, SciPy v1.13.1, Matplotlib v3.9.4, and Biopython v1.85.<br>
+* **Major dependencies:** PyTorch Geometric v2.6.1, torch-scatter v2.1.2, torch-sparse v0.6.18, Scikit-learn v1.6.1, NumPy v1.26.3, Pandas v2.3.0, SciPy v1.13.1, Matplotlib v3.9.4, and Biopython v1.85.<br>
 * **Additional bioinformatics tools:** PHANOTATE v1.6.7, Kaptive v3.1.0, BLAST+ v2.16.0, FastANI v1.34, Mash v2.3, CD-HIT v4.8.1, Prodigal v2.6.3 
 
 > **Environment setup**
