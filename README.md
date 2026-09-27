@@ -21,14 +21,13 @@ The data-processing pipeline generates sequence- and structure-based representat
    Note:
    * Download embedding model weights(ESMC, LucaOne, BacFormer) to **resources/embedding_models/**.
      * ESMC (https://github.com/Biohub/esm),
-     * ESM2 (https://github.com/facebookresearch/ESM), 
      * LucaOne (https://github.com/LucaOne/LucaOne),
      * BacFormer (https://github.com/macwiatrak/Bacformer)
    
    * Download AF3 weights from:
      * AlphaFold 3 (https://github.com/google-deepmind/alphafold3).
 
-   * Download the *PhageRBPdetection v4.0* (_https://github.com/dimiboeckaerts/PhageRBPdetection_) to **resources/**.
+   * Download *PhageRBPdetection v4.0* to **resources/** (_https://github.com/dimiboeckaerts/PhageRBPdetection_).
    * Start from genomes if phage RBPs and host K-locus proteins have not been extracted; otherwise, start from proteins.
 
 > **Pretrained models and processed datasets**
@@ -36,24 +35,23 @@ The data-processing pipeline generates sequence- and structure-based representat
 * **Zenodo:** [10.5281/zenodo.22985280](https://zenodo.org/uploads/22985280)
 
 > **Training from scratch or reproducing our analyses**
-1. Clone or download this repository.
-2. Install the required dependencies as described in the Installation section.
-3. Process your own dataset using the provided data-processing pipeline, or use our processed datasets to reproduce our analyses.
-4. Navigate to the corresponding training notebook for the desired setting (host-unseen, phage-unseen, or both-unseen).
-5. Update the required file paths and training configurations.
-6. Run the training notebook (*PhageHost_GNN_training.ipynb* ) to train the models from scratch or reproduce the reported analyses.
+1. Clone or download this repository and install the required dependencies.
+2. Process your dataset using the data-processing pipeline, or use our processed datasets to reproduce our analyses.
+3. Navigate to the training notebook for the desired setting (host-unseen, phage-unseen, or both-unseen).
+4. Update file paths and training configurations.
+5. Run the training notebook (*PhageHost_GNN_training.ipynb*) to train the models from scratch or reproduce the reported analyses.
 
    
 > **Making predictions for your data**
-1. Clone or download this repository and install the required dependencies as described in the Installation section.
-2. Download pretrained PhageHost-GNN model and Fine-tuned models from Zenodo.
-   Save to either *PH_trained_models/{model_name}* or * Finetuned_models/final_routed_models*
-3. Process your local phage and/or bacterial genomes using data_processing.ipynb to generate the required embeddings.
+1. Clone or download this repository and install the required dependencies.
+2. Download pretrained **PhageHost-GNN** model and **Fine-tuned** models from Zenodo to:
+   * *PH_trained_models/{model_name}* or *Finetuned_models/final_routed_models*
+3. Process your local phage and/or bacterial genomes using *data_processing.ipynb* to generate the required embeddings.
 4. Assign the highest supported similarity quantile to the new entities using:
     * Host-unseen: new_strains_q_assignment.ipynb
     * Both-unseen: new_phages_and_strains_q_assignment.ipynb
-5. Ensure the required training embeddings, new entity embeddings, and training entity cosine similarities are saved in the respective directories.
-6. For host-unseen fine-tuned models, comment cells 6, 7, 8, and 18, then uncomment cells 9 and 18.
+5. Ensure required training embeddings, new entity embeddings, and training entity cosine similarities are saved in the respective directories.
+6. For host-unseen fine-tuned models, comment cells 6, 7, 8, and 18, then uncomment cells 9 and 19.
 7. Update file paths, and run the corresponding inference notebook to generate phage–host interaction scores.
 
 > **Fine-tuning on your data**
@@ -74,4 +72,4 @@ Model training and inference were performed using: Python v3.9.23 on an NVIDIA H
 > **Environment setup**
 
 * All Conda environments listed in (_data_processing/resources/environments_) should be created before running the pipeline.
-* The main environment is used for data processing, model training, and inference, while model-specific environments are automatically invoked during embedding generation.
+* The *main environment* is used for data processing, model training, and inference, while model-specific environments are automatically invoked during embedding generation.
