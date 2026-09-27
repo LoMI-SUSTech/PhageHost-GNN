@@ -19,15 +19,16 @@ The data-processing pipeline generates sequence- and structure-based representat
 6. Compute host–host and phage–phage cosine-similarity matrices for similarity-based grouping and downstream model training or adaptation.
 
    Note:
-   * Download embedding model weights(ESMC, LucaOne, BacFormer) and save to **resources/embedding_models/**.
+   * Download embedding model weights(ESMC, LucaOne, BacFormer) to **resources/embedding_models/**.
      * ESMC (https://github.com/Biohub/esm),
      * ESM2 (https://github.com/facebookresearch/ESM), 
      * LucaOne (https://github.com/LucaOne/LucaOne),
      * BacFormer (https://github.com/macwiatrak/Bacformer)
-   Download AF3 weights from:
+   
+   * Download AF3 weights from:
      * AlphaFold 3 (https://github.com/google-deepmind/alphafold3).
 
-   * Download the *PhageRBPdetection v4.0* (_https://github.com/dimiboeckaerts/PhageRBPdetection_) and save to **resources/**.
+   * Download the *PhageRBPdetection v4.0* (_https://github.com/dimiboeckaerts/PhageRBPdetection_) to **resources/**.
    * Start from genomes if phage RBPs and host K-locus proteins have not been extracted; otherwise, start from proteins.
 
 > **Pretrained models and processed datasets**
